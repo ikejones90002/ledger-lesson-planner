@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
+  base: "/ledger-lesson-planner/",
   server: {
     host: true,
     // Leave open for tunneled/preview hosts (e.g. E2B, ngrok) when you move
