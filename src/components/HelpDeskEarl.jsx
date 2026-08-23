@@ -25,7 +25,7 @@ export default function HelpDeskEarl() {
       {open ? (
         <div className="earl-panel" role="dialog" aria-label="Earl’s Help Desk">
           <div className="earl-panel-header">
-            <img src="/earl-help-desk.jpg" alt="" />
+            <img src={`${import.meta.env.BASE_URL}earl-help-desk.jpg`} alt="" />
             <strong>Earl’s Help Desk</strong>
           </div>
           <div className="earl-messages">
@@ -53,7 +53,7 @@ export default function HelpDeskEarl() {
         aria-expanded={open}
         onClick={() => setOpen((value) => !value)}
       >
-        <img src="/earl-help-desk.jpg" alt="" />
+        <img src={`${import.meta.env.BASE_URL}earl-help-desk.jpg`} alt="" />
         Earl’s Help Desk
       </button>
     </div>

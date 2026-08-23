@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import ledgerLogo from '../assests/ledger-logo.png'
 
 const links = [
   { to: '/dashboard', label: 'All Lessons', end: true },
@@ -12,7 +13,7 @@ export default function Sidebar() {
     <nav className="binder">
       <NavLink to="/dashboard" style={{ textDecoration: 'none' }}>
         <div className="binder-brand">
-          <img src="/src/assests/ledger-logo.png" alt="Ledger" style={{ height: '64px', width: 'auto', cursor: 'pointer' }} />
+          <img src={ledgerLogo} alt="Ledger" style={{ height: '64px', width: 'auto', cursor: 'pointer' }} />
         </div>
       </NavLink>
       {links.map((link) => (
