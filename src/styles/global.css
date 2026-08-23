@@ -1,0 +1,335 @@
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* --- Binder tab sidebar --- */
+.binder {
+  width: var(--tab-width);
+  flex-shrink: 0;
+  background: var(--paper-raised);
+  border-right: 1px solid var(--rule);
+  position: relative;
+  padding: 28px 0;
+}
+
+/* Punched-hole margin: the quiet signature detail */
+.binder::before {
+  content: '';
+  position: absolute;
+  left: 14px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--rule) 0,
+    var(--rule) 6px,
+    transparent 6px,
+    transparent 26px
+  );
+}
+
+.binder-brand {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  padding: 0 28px 24px;
+  letter-spacing: -0.01em;
+}
+
+.binder-brand span {
+  color: var(--coral);
+}
+
+.binder-tab {
+  display: block;
+  width: calc(100% - 12px);
+  text-align: left;
+  padding: 12px 16px 12px 28px;
+  margin-bottom: 4px;
+  border: none;
+  background: transparent;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: var(--ink);
+  border-left: 4px solid transparent;
+  text-decoration: none;
+}
+
+.binder-tab:hover {
+  background: var(--paper);
+}
+
+.binder-tab.active {
+  background: var(--paper);
+  border-left-color: var(--coral);
+  font-weight: 600;
+}
+
+.binder-tab .swatch {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+/* --- Main ledger area --- */
+.ledger {
+  flex: 1;
+  padding: 36px 44px;
+  max-width: 1000px;
+}
+
+.ledger-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.ledger-header h1 {
+  font-size: 2rem;
+}
+
+.btn {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 10px 18px;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.btn-primary:hover {
+  background: #1a2540;
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: var(--rule);
+  color: var(--ink);
+}
+
+.btn-ghost:hover {
+  background: var(--paper-raised);
+}
+
+.btn-danger {
+  background: transparent;
+  color: var(--coral);
+  border-color: var(--coral);
+}
+
+.filter-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.filter-row select,
+.filter-row input {
+  font-family: var(--font-body);
+  padding: 8px 10px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--paper-raised);
+  color: var(--ink);
+  font-size: 0.88rem;
+}
+
+/* Lesson card: ruled ledger line */
+.lesson-card {
+  display: block;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--pencil);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  margin-bottom: 12px;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.lesson-card:hover {
+  border-color: var(--ink);
+}
+
+.lesson-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.lesson-card h3 {
+  font-size: 1.05rem;
+}
+
+.lesson-meta {
+  font-size: 0.82rem;
+  color: var(--pencil);
+  margin-top: 4px;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  color: var(--pencil);
+  margin-right: 6px;
+}
+
+.empty-state {
+  border: 1px dashed var(--rule);
+  border-radius: var(--radius);
+  padding: 40px 24px;
+  text-align: center;
+  color: var(--pencil);
+}
+
+/* --- Form --- */
+.plan-form {
+  display: grid;
+  gap: 16px;
+  max-width: 720px;
+}
+
+.plan-form label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--pencil);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.plan-form input,
+.plan-form select,
+.plan-form textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  padding: 10px 12px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--paper-raised);
+  color: var(--ink);
+  font-size: 0.95rem;
+}
+
+.plan-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* --- Pacing calendar --- */
+.week-strip {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.week-day {
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  min-height: 140px;
+  padding: 10px;
+}
+
+.week-day-label {
+  font-size: 0.75rem;
+  color: var(--pencil);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.week-day .lesson-chip {
+  display: block;
+  font-size: 0.78rem;
+  padding: 6px 8px;
+  border-radius: 4px;
+  background: var(--paper);
+  border-left: 3px solid var(--pencil);
+  margin-bottom: 6px;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+@media print {
+  .binder,
+  .no-print {
+    display: none !important;
+  }
+  .app-shell {
+    display: block;
+  }
+  .ledger {
+    padding: 0;
+    max-width: none;
+  }
+  body {
+    background: #fff;
+  }
+}
+
+@media (max-width: 860px) {
+  .app-shell {
+    flex-direction: column;
+  }
+  .binder {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    padding: 12px;
+  }
+  .binder::before {
+    display: none;
+  }
+  .binder-brand {
+    display: none;
+  }
+  .binder-tab {
+    white-space: nowrap;
+    border-radius: var(--radius);
+    border-left: none;
+    border-bottom: 3px solid transparent;
+  }
+  .binder-tab.active {
+    border-left: none;
+    border-bottom-color: var(--coral);
+  }
+  .ledger {
+    padding: 24px 20px;
+  }
+  .form-row,
+  .week-strip {
+    grid-template-columns: 1fr;
+  }
+}
