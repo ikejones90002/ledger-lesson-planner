@@ -144,7 +144,7 @@ export default function Landing() {
             textAlign: 'center',
           }}>
             <img
-              src="/src/assests/ledger-logo.png"
+              src={ledgerLogo}
               alt="Ledger"
               style={{ height: '280px', width: 'auto' }}
             />

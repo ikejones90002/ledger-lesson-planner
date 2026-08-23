@@ -27,7 +27,7 @@ export function Spark103Watermark() {
       }}
     >
       <img
-        src="/spark103-mark.png"
+        src={`${import.meta.env.BASE_URL}spark103-mark.png`}
         alt=""
         width={36}
         height={36}

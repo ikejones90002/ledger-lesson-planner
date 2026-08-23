@@ -3,6 +3,8 @@
  * 103 Software Solutions LLC
  */
 
+import spark103Mark from '../assests/spark103-mark.png'
+
 export default function Spark103Badge() {
   return (
       <a
@@ -29,7 +31,7 @@ export default function Spark103Badge() {
         onMouseLeave={(e) => e.currentTarget.style.background = 'rgba(0,0,0,0.85)'}
       >
         <img
-          src="/src/assests/spark103-mark.png"
+          src={spark103Mark}
           alt=""
           width="16"
           height="16"
