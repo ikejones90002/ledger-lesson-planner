@@ -4,6 +4,7 @@
  */
 
 import { useNavigate } from 'react-router-dom'
+import ledgerLogo from '../assests/ledger-logo.png'
 
 export default function Landing() {
   const navigate = useNavigate()
